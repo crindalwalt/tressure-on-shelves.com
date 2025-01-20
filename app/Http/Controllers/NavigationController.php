@@ -17,4 +17,9 @@ class NavigationController extends Controller
             'products' => $products,
         ]);
     }
+
+
+    public function shoppage (){
+        return view("shop");
+    }
 }

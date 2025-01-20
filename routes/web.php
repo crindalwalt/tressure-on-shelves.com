@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/",[NavigationController::class,"homepage"])->name("home");
+Route::get("/products",[NavigationController::class,"shoppage"])->name("product.all");
 
 
 
