@@ -12,14 +12,31 @@ class NavigationController extends Controller
     {
         $categories = Category::all();
         $products = Product::paginate(12);
-        return view("index", [
+        return view("shop.index", [
             'categories' => $categories,
             'products' => $products,
         ]);
     }
 
 
-    public function shoppage (){
-        return view("shop");
+    public function shoppage()
+    {
+        $products = Product::all();
+        $categories = Category::all();
+        return view("shop.shop", [
+            'products' => $products,
+            'categories' => $categories,
+        ]);
+    }
+
+
+    public function product_detail($product)
+    {
+
+        $prod = Product::find($product);
+
+        return view("shop.product", [
+            "product" => $prod,
+        ]);
     }
 }

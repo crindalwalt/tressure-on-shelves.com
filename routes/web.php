@@ -7,6 +7,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/",[NavigationController::class,"homepage"])->name("home");
 Route::get("/products",[NavigationController::class,"shoppage"])->name("product.all");
+Route::get("/products/{product}/view",[NavigationController::class,"product_detail"])->name("product.single");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
