@@ -267,176 +267,20 @@
                 <h2>You May Like Also</h2>
             </div>
             <div class="product-slider-active-4">
-                <div class="product-wrap-plr-1">
-                    <div class="product-wrap">
-                        <div class="product-img product-img-zoom mb-25">
-                            <a href="product-details.html">
-                                <img src="assets/images/product/product-151.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">Product Title</a></h4>
-                            <div class="product-price">
-                                <span>$ 124</span>
-                                <span class="old-price">$ 130</span>
-                            </div>
-                        </div>
-                        <div class="product-action-position-1 text-center">
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Product Title</a></h4>
-                                <div class="product-price">
-                                    <span>$ 124</span>
-                                    <span class="old-price">$ 130</span>
-                                </div>
-                            </div>
-                            <div class="product-action-wrap">
-                                <div class="product-action-cart">
-                                    <button title="Add to Cart">Add to cart</button>
-                                </div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="icon-zoom"></i></button>
-                                <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                <button title="Add to Wishlist"><i class="icon-heart-empty"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrap-plr-1">
-                    <div class="product-wrap">
-                        <div class="product-img product-img-zoom mb-25">
-                            <a href="product-details.html">
-                                <img src="assets/images/product/product-152.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">Product Title</a></h4>
-                            <div class="product-price">
-                                <span>$ 124</span>
-                                <span class="old-price">$ 130</span>
-                            </div>
-                        </div>
-                        <div class="product-action-position-1 text-center">
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Product Title</a></h4>
-                                <div class="product-price">
-                                    <span>$ 124</span>
-                                    <span class="old-price">$ 130</span>
-                                </div>
-                            </div>
-                            <div class="product-action-wrap">
-                                <div class="product-action-cart">
-                                    <button title="Add to Cart">Add to cart</button>
-                                </div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="icon-zoom"></i></button>
-                                <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                <button title="Add to Wishlist"><i class="icon-heart-empty"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrap-plr-1">
-                    <div class="product-wrap">
-                        <div class="product-img product-img-zoom mb-25">
-                            <a href="product-details.html">
-                                <img src="assets/images/product/product-153.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">Product Title</a></h4>
-                            <div class="product-price">
-                                <span>$ 124</span>
-                                <span class="old-price">$ 130</span>
-                            </div>
-                        </div>
-                        <div class="product-action-position-1 text-center">
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Product Title</a></h4>
-                                <div class="product-price">
-                                    <span>$ 124</span>
-                                    <span class="old-price">$ 130</span>
-                                </div>
-                            </div>
-                            <div class="product-action-wrap">
-                                <div class="product-action-cart">
-                                    <button title="Add to Cart">Add to cart</button>
-                                </div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="icon-zoom"></i></button>
-                                <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                <button title="Add to Wishlist"><i class="icon-heart-empty"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrap-plr-1">
-                    <div class="product-wrap">
-                        <div class="product-img product-img-zoom mb-25">
-                            <a href="product-details.html">
-                                <img src="assets/images/product/product-154.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">Product Title</a></h4>
-                            <div class="product-price">
-                                <span>$ 124</span>
-                                <span class="old-price">$ 130</span>
-                            </div>
-                        </div>
-                        <div class="product-action-position-1 text-center">
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Product Title</a></h4>
-                                <div class="product-price">
-                                    <span>$ 124</span>
-                                    <span class="old-price">$ 130</span>
-                                </div>
-                            </div>
-                            <div class="product-action-wrap">
-                                <div class="product-action-cart">
-                                    <button title="Add to Cart">Add to cart</button>
-                                </div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="icon-zoom"></i></button>
-                                <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                <button title="Add to Wishlist"><i class="icon-heart-empty"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrap-plr-1">
-                    <div class="product-wrap">
-                        <div class="product-img product-img-zoom mb-25">
-                            <a href="product-details.html">
-                                <img src="assets/images/product/product-152.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h4><a href="product-details.html">Product Title</a></h4>
-                            <div class="product-price">
-                                <span>$ 124</span>
-                                <span class="old-price">$ 130</span>
-                            </div>
-                        </div>
-                        <div class="product-action-position-1 text-center">
-                            <div class="product-content">
-                                <h4><a href="product-details.html">Product Title</a></h4>
-                                <div class="product-price">
-                                    <span>$ 124</span>
-                                    <span class="old-price">$ 130</span>
-                                </div>
-                            </div>
-                            <div class="product-action-wrap">
-                                <div class="product-action-cart">
-                                    <button title="Add to Cart">Add to cart</button>
-                                </div>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="icon-zoom"></i></button>
-                                <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                <button title="Add to Wishlist"><i class="icon-heart-empty"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+                @if ($similar_product->isNotEmpty())
+                    @foreach ($similar_product as $product)
+                    {{-- <div class="mx-1"> --}}
+                        <x-utils.product-card :product="$product" />
+
+                    {{-- </div> --}}
+                    @endforeach
+                    @else
+                    No Similar product found
+                @endif
+
+
             </div>
         </div>
     </div>

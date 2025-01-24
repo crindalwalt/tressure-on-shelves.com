@@ -5,6 +5,12 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <!-- Heading -->
+        <div>
+            <h2 class="text-xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-start font-bold my-6 font-sans text-gray-900 antialiased">
+                Please login
+            </h2>
+        </div>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
@@ -42,6 +48,15 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+        </div>
+        <div class="flex items-center justify-end mt-4">
+
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                    {{ __('Does not have an Account , Register') }}
+                </a>
+
+
+
         </div>
     </form>
 </x-guest-layout>

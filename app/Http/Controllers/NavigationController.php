@@ -34,9 +34,11 @@ class NavigationController extends Controller
     {
 
         $prod = Product::find($product);
+        $similarProducts = Product::paginate(4);
 
         return view("shop.product", [
             "product" => $prod,
+            'similar_product' => $similarProducts,
         ]);
     }
 }
