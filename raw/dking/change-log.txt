@@ -1,9 +1,0 @@
-VERSION: 1.3.0 —-—-DATE: 29-11-2022
-1. Updated: Bootstrap v5.2.3
-
-------------------------------------
-
-Date:    18-07-2021
-Version: 1.2
-=======================
-1. We have Updated Bootstrap v4.5.0 to Bootstrap v5.0.2

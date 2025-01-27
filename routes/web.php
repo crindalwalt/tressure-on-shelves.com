@@ -1,15 +1,34 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
+
+// STORE ROUTES =============================================================
 Route::get("/",[NavigationController::class,"homepage"])->name("home");
 Route::get("/products",[NavigationController::class,"shoppage"])->name("product.all");
 Route::get("/products/{product}/view",[NavigationController::class,"product_detail"])->name("product.single");
 
 
+
+
+// ADMIN ROUTES =============================================================
+
+Route::prefix("/admin")->group(function (){
+    Route::get("/",[AdminController::class,"dashboard"])->name("admin.dashboard");
+    Route::get("/products",[ProductController::class,"index"])->name("admin.products.all");
+
+
+
+
+
+
+
+});
 
 
 
