@@ -38,14 +38,14 @@
                     </a>
                 </li>
 
-                {{-- <li>
-                    <a href="chat.html" class=" waves-effect">
+                <li>
+                    <a href="{{ route("products.create") }}" class=" waves-effect">
                         <i class="dripicons-message"></i>
-                        <span>Chat</span>
+                        <span>Add Product</span>
                     </a>
                 </li>
 
-                <li>
+               {{--  <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="dripicons-cart"></i>
                         <span>Ecommerce</span>

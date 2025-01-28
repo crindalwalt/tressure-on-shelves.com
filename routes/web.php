@@ -21,7 +21,8 @@ Route::get("/products/{product}/view",[NavigationController::class,"product_deta
 Route::prefix("/admin")->group(function (){
     Route::get("/",[AdminController::class,"dashboard"])->name("admin.dashboard");
     Route::get("/products",[ProductController::class,"index"])->name("admin.products.all");
-
+    Route::get("/products/create",[ProductController::class,"create"])->name("products.create");
+    Route::post("/product/store",[ProductController::class,"store"])->name("product.store");
 
 
 

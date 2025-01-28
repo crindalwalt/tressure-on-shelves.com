@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->text("description");
-            $table->string("slug");
-            $table->string("image");
+            $table->string("slug")->nullable();
+            $table->string("image")->nullable();
             $table->string("price");
             $table->string("old_price")->nullable();
             $table->string("category_id");
             $table->string("user_id");
-            $table->string("rating");
+            $table->string("rating")->nullable();
             $table->enum("status",["pending","active","cancelled"])->default("pending");
 
             $table->timestamps();

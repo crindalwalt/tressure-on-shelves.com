@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Category;
 use App\Models\Product;
 
 class ProductController extends Controller
@@ -14,8 +15,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view("admin.products.index",[
-            "products"=> $products,
+        return view("admin.products.index", [
+            "products" => $products,
         ]);
     }
 
@@ -24,7 +25,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        // dd($categories);
+        return view("admin.products.create", [
+            "categories" => $categories,
+        ]);
     }
 
     /**
@@ -32,7 +37,17 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        // dd($request->all());
+        Product::create([
+            'name' => $request->product_name,
+            'description' => $request->product_description,
+            'price' => $request->price,
+            'old_price' => $request->old_price,
+            'category_id' => $request->category_id,
+            'user_id' => auth()->user()->id ?? "0",
+
+        ]);
+        return "ho gya save";
     }
 
     /**
