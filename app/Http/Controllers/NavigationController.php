@@ -21,7 +21,7 @@ class NavigationController extends Controller
 
     public function shoppage()
     {
-        $products = Product::all();
+        $products = Product::latest()->get();
         $categories = Category::all();
         return view("shop.shop", [
             'products' => $products,

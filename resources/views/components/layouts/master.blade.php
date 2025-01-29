@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
     <div class="main-wrapper main-wrapper-3">
        {{--  header here --}}

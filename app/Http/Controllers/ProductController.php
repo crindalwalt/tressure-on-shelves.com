@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::latest()->paginate(20);
         return view("admin.products.index", [
             "products" => $products,
         ]);
@@ -37,7 +37,16 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        // dd($request->all());
+        // dd($request->product_image);
+
+        if($request->hasFile("product_image")){
+            $image = $request->file("product_image");
+            $imageName = "Product-" . time() . "." . $image->getClientOriginalExtension();
+            $image->move(public_path("product-images"), $imageName);
+            // return $imageName;
+        }else{
+            return "image ni hy";
+        }
         Product::create([
             'name' => $request->product_name,
             'description' => $request->product_description,
@@ -45,9 +54,10 @@ class ProductController extends Controller
             'old_price' => $request->old_price,
             'category_id' => $request->category_id,
             'user_id' => auth()->user()->id ?? "0",
+            'image' =>  "product-images/" . $imageName,
 
         ]);
-        return "ho gya save";
+        return redirect()->route("admin.products.all");
     }
 
     /**

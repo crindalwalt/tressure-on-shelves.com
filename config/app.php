@@ -65,6 +65,19 @@ return [
     |
     */
 
+    // 'providers' => [
+    //     /*
+    // * Package Service Providers...
+    // */
+    //     RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+    // ],
+
+    // 'aliases' =>[
+    //     'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+    // ],
+
+
     'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
