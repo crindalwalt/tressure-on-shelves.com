@@ -44,6 +44,18 @@
                         <span>Add Product</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route("admin.categories") }}" class=" waves-effect">
+                        <i class="dripicons-bookmarks"></i>
+                        <span>Category</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route(name: "admin.categories.create") }}" class=" waves-effect">
+                        <i class="dripicons-brush"></i>
+                        <span>Add Category</span>
+                    </a>
+                </li>
 
                {{--  <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

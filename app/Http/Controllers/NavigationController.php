@@ -41,4 +41,10 @@ class NavigationController extends Controller
             'similar_product' => $similarProducts,
         ]);
     }
+
+
+
+    public function notFound(){
+        return view("admin.setting.404");
+    }
 }

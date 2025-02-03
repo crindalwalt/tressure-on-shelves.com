@@ -5,62 +5,62 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
+
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view("admin.categories.index", [
+            'categories' => $categories,
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
+    public function destroy(Category $cat)
+    {
+        $cat->delete();
+        Alert::success("Category Deleted", "The category you requested is deleted successfully");
+        return redirect()->back();
+    }
+
+
     public function create()
     {
-        //
+        return view("admin.categories.create");
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreCategoryRequest $request)
+    public function store(Request $request)
     {
-        //
-    }
+        //? validating the request
+        $request->validate([
+            'category_name' => ['required', 'string'],
+            'category_icon' => ['required'],
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Category $category)
-    {
-        //
-    }
+        //? storage the image
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
+        if ($request->hasFile("category_icon")) {
+            $icon = $request->file("category_icon");
+            $iconName = "Category-" . time() . "." . $icon->getClientOriginalExtension();
+            $icon->move(public_path("category-images"), $iconName);
+        }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateCategoryRequest $request, Category $category)
-    {
-        //
-    }
+        //? generate slug
+        $slug = Str::slug($request->category_name, "-");
+        // dd($slug);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Category $category)
-    {
-        //
+        //? category save
+        Category::create([
+            'name' => $request->category_name,
+            'illustration' => "category-images/" . $iconName,
+            'slug' => $slug,
+        ]);
+
+        //? redirect user
+        return redirect()->back();
     }
 }
