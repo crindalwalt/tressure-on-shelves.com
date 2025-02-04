@@ -18,7 +18,8 @@
                                             25% Off
                                         </div> --}}
 
-                                        <img src="{{ asset("$item->image") }}" alt="" class="img-fluid mx-auto d-block">
+                                        <img src="{{ asset("$item->image") }}" alt=""
+                                            class="img-fluid mx-auto d-block">
                                     </div>
 
 
@@ -27,7 +28,13 @@
 
                                         <a href="" class="text-dark">
                                             <h5 class="font-size-18 mt-3">{{ $item->name }}</h5>
+
                                         </a>
+                                        <div>
+                                            <span class="rounded-pill bg-primary text-white mt-3">
+                                                {{ $item->category->name }}
+                                            </span>
+                                        </div>
 
                                         <h4 class="mt-3 mb-0">${{ $item->price }} <span
                                                 class="font-size-14 text-muted me-2"><del>

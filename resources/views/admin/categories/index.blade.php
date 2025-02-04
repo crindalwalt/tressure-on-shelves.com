@@ -31,7 +31,7 @@
                                 @foreach ($categories as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->name }}({{ count($item->products) }})</td>
                                         <td>
                                             <img style="width: 80px;height:80px;border-radius:.4rem;"
                                                 src="{{ asset($item->illustration) }} " alt="category image">
