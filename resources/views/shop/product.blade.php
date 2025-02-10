@@ -60,7 +60,7 @@
                         </div>
                         <div class="pro-details-action-wrap">
                             <div class="pro-details-buy-now">
-                                <a href="#">Buy Now</a>
+                                <a href="{{ route("checkout",$product->id) }}">Buy Now</a>
                             </div>
                             <div class="pro-details-action">
                                 <a title="Add to Cart" href="#"><i class="icon-basket"></i></a>

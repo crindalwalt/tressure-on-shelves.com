@@ -42,9 +42,23 @@ class NavigationController extends Controller
         ]);
     }
 
+    public function checkout(Product $product)
+    {
+        $shipping = 10;
+        $vat = 14;
+        $vat_calc = ($product->price + $shipping)* $vat/100;
+        // dd($product);
+        return view("shop.order", [
+            'product' => $product,
+            'shipping' => $shipping,
+            'vat' => $vat,
+            'vat_calc' => $vat_calc,
+            'total' => ($product->price + $shipping)+ $vat_calc,
+        ]);
+    }
 
-
-    public function notFound(){
+    public function notFound()
+    {
         return view("admin.setting.404");
     }
 }

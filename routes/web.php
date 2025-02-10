@@ -21,12 +21,19 @@ Route::get("/", [NavigationController::class, "homepage"])->name("home");
 Route::get("/products", [NavigationController::class, "shoppage"])->name("product.all");
 Route::get("/products/{product}/view", [NavigationController::class, "product_detail"])->name("product.single");
 
-Route::get("/404",[NavigationController::class,'notFound'])->name("admin.404");
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get("buy/{product}", [NavigationController::class, "checkout"])->name("checkout");
+});
+
+
+Route::get("/404", [NavigationController::class, 'notFound'])->name("admin.404");
 
 
 // ADMIN ROUTES =============================================================
 
-Route::middleware(['auth',AdminCheck::class])->prefix("/admin")->group(function () {
+Route::middleware(['auth', AdminCheck::class])->prefix("/admin")->group(function () {
     //? PRODUCT CRUD
     Route::get("/", [AdminController::class, "dashboard"])->name("admin.dashboard");
     Route::get("/products", [ProductController::class, "index"])->name("admin.products.all");
@@ -35,15 +42,10 @@ Route::middleware(['auth',AdminCheck::class])->prefix("/admin")->group(function 
 
 
     //? CATEGORY CRUD
-    Route::get("/categories",[CategoryController::class,'index'])->name("admin.categories");
-    Route::get("/categories/create",[CategoryController::class,'create'])->name("admin.categories.create");
-    Route::post("/categories/store",[CategoryController::class,'store'])->name("category.store");
-    Route::get("/categories/{cat}/delete",[CategoryController::class,'destroy'])->name("admin.categories.destroy");
-
-
-
-
-
+    Route::get("/categories", [CategoryController::class, 'index'])->name("admin.categories");
+    Route::get("/categories/create", [CategoryController::class, 'create'])->name("admin.categories.create");
+    Route::post("/categories/store", [CategoryController::class, 'store'])->name("category.store");
+    Route::get("/categories/{cat}/delete", [CategoryController::class, 'destroy'])->name("admin.categories.destroy");
 });
 
 
