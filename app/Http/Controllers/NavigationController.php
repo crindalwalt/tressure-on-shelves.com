@@ -45,7 +45,7 @@ class NavigationController extends Controller
     public function checkout(Product $product)
     {
         $shipping = 10;
-        $vat = 14;
+        $vat = 20;
         $vat_calc = ($product->price + $shipping)* $vat/100;
         // dd($product);
         return view("shop.order", [

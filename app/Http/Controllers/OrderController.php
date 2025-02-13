@@ -14,7 +14,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $data['orders'] = Order::all();
+        $data['user'] = auth()->user();
+        return view("admin.orders.orders_all" )->with($data);
     }
 
     /**
@@ -80,5 +82,20 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+
+
+    public function process(Order $order){
+        $order->update([
+            'status' => 'dispatched',
+        ]);
+        return redirect()->back();
+    }
+
+    public function cancel(Order $order){
+        $order->update([
+            'status' => 'cancelled',
+        ]);
+        return redirect()->back();
     }
 }

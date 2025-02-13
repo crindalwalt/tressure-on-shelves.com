@@ -56,6 +56,13 @@
                         <span>Add Category</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route(name: "admin.order.index") }}" class=" waves-effect">
+                        <i class="dripicons-box"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
 
                {{--  <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
